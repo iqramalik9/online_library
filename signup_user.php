@@ -31,6 +31,12 @@
 	
 	<div class="limiter">
 		<div class="container-login100" style="background-image: url('images/bg-01.jpg');">
+		<?php
+			if(isset($_GET['rid'])){
+				print('<div class="alert alert-danger">
+				<strong>Sign Up Failed!</strong>');
+			  }
+			?>
 			<div class="wrap-login100">
 				<form class="login100-form validate-form" action="do_signup_user.php" method="post" id="formname">
 					<span class="login100-form-logo">
@@ -61,7 +67,6 @@
 							Sign Up
 						</button>
 					</div>
-
 				</form>
 			</div>
 		</div>

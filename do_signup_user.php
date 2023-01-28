@@ -6,7 +6,6 @@ $db = new Database();
 $uname = $_POST['name'];
 $uemail = $_POST['email'];
 $upass = md5($_POST['password']);
-echo "done";
 
 $res = $db->signupUser($uname, $uemail, $upass);
 
