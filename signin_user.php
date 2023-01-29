@@ -25,6 +25,7 @@
 <!--===============================================================================================-->
 	<link rel="stylesheet" type="text/css" href="css/util.css">
 	<link rel="stylesheet" type="text/css" href="css/main.css">
+	<link rel="stylesheet" type="text/css" href="css/style.css">
 <!--===============================================================================================-->
 </head>
 <body>
@@ -70,7 +71,9 @@
 					</div>
 
 				</form>
-
+				<div class="anchor">
+				<a href="signin_admin.php">Sign In As Admin</a>
+			</div>
 			</div>
 
 

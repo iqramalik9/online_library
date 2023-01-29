@@ -1,5 +1,6 @@
 <?php
 $id =$_GET['rid'];
+$cu=2;
 ?>
 
 <!DOCTYPE html>

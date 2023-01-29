@@ -50,6 +50,14 @@ class Database{
             false;
         }
     }
+
+    function displaybooksUser(){
+        $sql = "SELECT * FROM books";
+        $st = $this->db->prepare($sql);
+        $st->execute(array());
+        return $st;
+    }
+
     
 }
     ?>
