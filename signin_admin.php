@@ -31,7 +31,7 @@
 <body>
 	
 	<div class="limiter">
-		<div class="container-login100" style="background-image: url('images/bg-01.jpg');">
+		<div class="container-login100" style="background-image: url('images/library-bg.jpeg');">
 		<?php
     if(isset($_GET['rid'])){
       print('<div class="alert alert-danger">

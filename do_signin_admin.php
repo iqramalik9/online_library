@@ -11,6 +11,7 @@ $upass = $_POST['password'];
 $res = $db->signinAdmin($uname, $uemail, $upass);
 
 if($res === true){
+    setcookie('logged_in', true);
     header('location:admin_homepage.php?rid=1');
 }
 else{

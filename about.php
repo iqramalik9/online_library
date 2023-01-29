@@ -6,7 +6,7 @@
 <link rel="stylesheet" type="text/css" href="css/util.css">
 
     <!--Title of the site. it shows on the tab-->
-    <title>Home</title>
+    <title>AlphaRead</title>
 
 </head>
 

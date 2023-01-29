@@ -32,7 +32,7 @@
 
 	<div class="limiter">
 
-		<div class="container-login100" style="background-image: url('images/bg-01.jpg');">
+		<div class="container-login100" style="background-image: url('images/library-bg.jpeg');">
 		<?php
     if(isset($_GET['rid'])){
       print('<div class="alert alert-danger">
@@ -64,8 +64,8 @@
 						<span class="focus-input100" data-placeholder="&#xf191;"></span>
 					</div>
 
-          <div class="container-login100-form-btn">
-          <button type="submit" class="login100-form-btn" form="formname" value="Submit">
+          <div class="container-login100-form-btn" >
+          <button type="submit" class="login100-form-btn" id ="btn-success" form="formname" value="Submit">
 							Sign In
 						</button>
 					</div>

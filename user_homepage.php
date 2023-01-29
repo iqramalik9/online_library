@@ -1,6 +1,7 @@
 <?php
+if(!isset($_COOKIE['logged_in']))
+header('location:signin_user.php?rid=5');
 $id =$_GET['rid'];  
-$cu=1;
 ?>
 
 <!DOCTYPE html>
@@ -17,14 +18,16 @@ $cu=1;
 </head>
 <body>
 
-<div class="container mt-3">
+<div class="container">
   <div >
 
     <?php
       if($id == 1){
+
         ?>
         <div class="alert alert-success" role="alert">
         <strong>Signed In Successfully!</strong> 
+        <span class="closebtn" onclick="this.parentElement.style.display='none';">&times;</span> 
         
       </div>
       <?php
@@ -34,6 +37,7 @@ $cu=1;
         ?>
         <div class="alert alert-success" role="alert">
         <strong>Signed Up Successfully!</strong> 
+        <span class="closebtn" onclick="this.parentElement.style.display='none';">&times;</span> 
 
       </div>
       <?php
@@ -64,23 +68,43 @@ $cu=1;
         </div>
         </li>
         <li>
-        <div class="container-login100-form-btn" id="signup">
-        <button  class="login100-form-btn"  onclick="window.location.href = 'signup_user.php'">
-      Sign Up
-    </button>
-    </div>
-        </li>
-        <li>
-   
   <div class="container-login100-form-btn" id="signin">
   <button  class="login100-form-btn"  onclick="window.location.href = 'signin_user.php'">
-      Sign In
+      Sign Out
     </button>
     </div>
         </li>             
     </ul>
 
 </div>
+<div class="clear" id="nav-bar">
+    <ul>
+           
+        <li>
+        <div id="dashboard">
+            <a href="user_dashboard.php">Dashboard</a>
+            </div>
+        </li>
+        <li>
+            <div id="dashboard">                 
+            <a href="displayallbooksUser.php">See All available Books</a>
+        </div>
+        </li>
+        <li>
+    </ul>
+    </div>
+
+
+        
+        <div class="image">
+             <img  src="images/library.jpeg" alt="books">
+            </div>
+            <div class="main-content">
+                <h3>Alpha Read</h3>
+                <p>World's biggest E library providing you with a bundle of books from all around the World.
+                    Get your desired book from Alpha Read. Subscribe to this website and become one of the Alpha Reader. Become a part of 
+                    Alpha Reader Community and contribute to the world.</p>
+            </div>
 
 </body>
 </html>

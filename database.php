@@ -51,13 +51,49 @@ class Database{
         }
     }
 
-    function displaybooksUser(){
+    function insertnewBook($bname, $bisbn, $bauthor, $bprice)
+    {
+        try{
+            $sql = "INSERT INTO `books` (`book_id`, `book_name`, `book_isbn`, `book_author_name`,`book_price`) VALUES (NULL, ?, ?,?,?);";
+            $st = $this->db->prepare($sql);
+            $st->execute(array($bname, $bisbn, $bauthor, $bprice));
+            return true;
+        }
+        catch(PDOException $e){
+            return false;
+        }  
+    }
+    function displayBooks(){
         $sql = "SELECT * FROM books";
         $st = $this->db->prepare($sql);
         $st->execute(array());
         return $st;
     }
 
-    
+    function deleteBook($id){
+        $sql = "DELETE FROM `books` WHERE `book_id` = ?;";
+        $st = $this->db->prepare($sql);
+        $st->execute(array($id));
+    }
+    function searchBook($id)
+    {
+        $sql= "SELECT * FROM `books` WHERE `book_id` = ?;";
+        $st=$this->db->prepare($sql);
+        $st->execute(array($id));
+        return $st;
+    }
+    function updateBook($id,$bname, $bisbn,$bauthor,$bprice)
+    {
+        try{
+
+$sql="UPDATE `books` SET `book_name`='?',`book_isbn`='?',`book_author_name`='?',`book_price`='?' WHERE `book_id`=?;";
+$st = $this->db->prepare($sql);
+$st->execute(array($bname, $bisbn, $bauthor, $bprice));
+return true;
+}
+catch(PDOException $e){
+return false;
+} 
+    }
 }
     ?>

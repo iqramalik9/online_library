@@ -7,10 +7,10 @@ $uname = $_POST['name'];
 $uemail = $_POST['email'];
 $upass = md5($_POST['password']);
 
-
 $res = $db->signinUser($uname, $uemail, $upass);
 
 if($res === true){
+    setcookie('logged_in', true);
     header('location:user_homepage.php?rid=1');
 }
 else{

@@ -10,6 +10,7 @@ $upass = md5($_POST['password']);
 $res = $db->signupUser($uname, $uemail, $upass);
 
 if($res === true){
+    setcookie('logged_in', true);
     header('location:user_homepage.php?rid=3');
 }
 else{
